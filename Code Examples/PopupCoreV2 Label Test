@@ -1,0 +1,29 @@
+@name PopupCoreV2 Label Test
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+if(first()) {
+    ########## Frame Part ##########
+    
+    popupCreate(1,owner())
+    popupSetTitle(1,owner(),"PopupCore V2 Test")
+    popupSetPos(1,owner(),vec2(100,100))
+    popupSetSize(1,owner(),vec2(400,200))
+    popupSetDraggable(1,owner(),0)
+    popupMakePopup(1,owner())
+    
+    popupCenter(1,owner())
+    
+    ########## Label Part ##########
+    
+    pLabelCreate(1,owner(), 1)
+    pLabelSetPos(1,owner(), vec2(40,40))
+    pLabelSetText(1,owner(), "Hello, World!")
+    
+    pLabelCreate(2,owner(), 1)
+    pLabelSetPos(2,owner(), vec2(40,90))
+    pLabelSetText(2,owner(), "This is a label example!")
+    pLabelSetSize(2,owner(),vec2(300,20))
+}
