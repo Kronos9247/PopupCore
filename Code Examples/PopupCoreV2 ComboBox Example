@@ -1,0 +1,40 @@
+@name PopupCoreV2 ComboBox Example
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+interval(1)
+
+if(first()) {
+    ########## Frame Part ##########
+    
+    popupCreate(1,owner())
+    popupSetTitle(1,owner(),"PopupCore V2 Test")
+    popupSetPos(1,owner(),vec2(100,100))
+    popupSetSize(1,owner(),vec2(400,300))
+    popupSetDraggable(1,owner(),0)
+    popupMakePopup(1,owner())
+    
+    popupCenter(1,owner())
+    
+    ########## Html Part ##########
+    
+    pComboBoxCreate(1,owner(),1)
+    pComboBoxSetPos(1,owner(),vec2(100,100))
+    pComboBoxSetSize(1,owner(),vec2(100,100))
+    
+    pComboBoxSetValue(1,owner(),"Players")
+    
+    pComboBoxAddChoice(1,owner(), "A", 1)
+    pComboBoxAddChoice(1,owner(), "B", 2)
+    pComboBoxAddChoice(1,owner(), "C", 3)
+    pComboBoxAddChoice(1,owner(), "D", 4)
+    
+    pComboBoxAddFunc(1,owner())
+}
+
+if(pComboBoxOnSelect(1,owner()) == 1) {
+    print("OnSelect")
+    print(pComboBoxSelectedData(1,owner()) + ". " + pComboBoxSelectedValue(1,owner()))
+}
