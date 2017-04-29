@@ -1,0 +1,14 @@
+{
+	"title" : "PopupCoreV2",
+	"type" : "tool",
+	"tags" : [ 
+					"fun", 
+					"build" 
+				],
+	"ignore" :
+				[
+					"*.psd",
+					"*.vcproj",
+					"*.svn*"
+				]
+}

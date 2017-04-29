@@ -1,0 +1,5 @@
+E2Helper.Descriptions["pHtmlCreate"] = "Creates a Html Component!"
+E2Helper.Descriptions["pHtmlSetPos"] = "Sets the position of the html component"
+E2Helper.Descriptions["pHtmlSetSize"] = "Sets the size of the html component"
+E2Helper.Descriptions["pHtmlDock"] = "Dock the html component to the parent!"
+E2Helper.Descriptions["pHtmlOpenURL"] = "Open the url on the html component."
