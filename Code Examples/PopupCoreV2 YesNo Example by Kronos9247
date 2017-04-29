@@ -1,0 +1,36 @@
+@name PopupCoreV2 YesNo Example by Kronos9247
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+interval(1)
+
+if(first()) {
+    popupCreate(1, owner())
+    popupSetSize(1, owner(), vec2(50+40+40+120+120, 40+40))
+    popupSetTitle(1, owner(), "Popup Core Example")
+    popupCenter(1, owner())
+    #popupSetVisible(1, owner())
+    popupMakePopup(1, owner())
+    
+    pbuttonCreate(1, owner(), 1)
+    pbuttonSetTitle(1, owner(), "Yes")
+    pbuttonAddFunc(1, owner())
+    pbuttonSetPos(1, owner(), vec2(40, 30))
+    pbuttonSetSize(1, owner(), vec2(120, 40))
+    
+    pbuttonCreate(2, owner(), 1)
+    pbuttonSetTitle(2, owner(), "No")
+    pbuttonAddFunc(2, owner())
+    pbuttonSetPos(2, owner(), vec2(40+50+120, 30))
+    pbuttonSetSize(2, owner(), vec2(120, 40))
+}
+
+if(pbuttonIsPressed(1, owner())) {
+    print("Yes") popupClose(1, owner())
+}
+elseif(pbuttonIsPressed(2, owner())) {
+    print("No") popupClose(1, owner())
+}
+
