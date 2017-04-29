@@ -1,0 +1,24 @@
+@name PopupCoreV2 HTML Test
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+if(first()) {
+    ########## Frame Part ##########
+    
+    popupCreate(1,owner())
+    popupSetTitle(1,owner(),"PopupCore V2 Test")
+    popupSetPos(1,owner(),vec2(100,100))
+    popupSetSize(1,owner(),vec2(400,300))
+    popupSetDraggable(1,owner(),0)
+    popupMakePopup(1,owner())
+    
+    popupCenter(1,owner())
+    
+    ########## Html Part ##########
+    
+    pHtmlCreate(1,owner(),1)
+    pHtmlDock(1,owner(), 1)
+    pHtmlOpenURL(1,owner(), "http://google.com")
+}
