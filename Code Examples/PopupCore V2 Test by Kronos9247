@@ -1,0 +1,25 @@
+@name PopupCore V2 Test by Kronos9247
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+interval(1)
+
+if(first()) {
+    popupCreate(1,owner())
+    popupSetTitle(1,owner(),"PopupCore V2 Test")
+    popupSetPos(1,owner(),vec2(100,100))
+    popupSetSize(1,owner(),vec2(400,300))
+    popupSetDraggable(1,owner(),0)
+    popupMakePopup(1,owner())
+    
+    popupCenter(1,owner())
+    
+    popupShowCloseButton(1,owner(), 0)
+}
+
+timer("close",3000)
+if(clk("close")) {
+    popupClose(1,owner())
+}
