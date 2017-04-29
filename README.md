@@ -1,3 +1,3 @@
-# PopupCore V1
+# PopupCore V2
 
-Popup Core is a simple extension of expression2. With popup core you can create Derma and Vguis in e2. This version will not be updated! But there is a better version of the Core( V2 ).
+Popup Core is a simple extension of expression2. With popup core you can create Derma and Vguis in e2. This version will not be updated! PopupCoreV1 download: https://github.com/kronos9247/PopupCore/tree/PopupCoreV1.
