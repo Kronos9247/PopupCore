@@ -1,0 +1,31 @@
+@name PopupCoreV2 TextEntry Test
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+interval(1)
+
+if(first()) {
+    ########## Frame Part ##########
+    
+    popupCreate(1,owner())
+    popupSetTitle(1,owner(),"PopupCore V2 Test")
+    popupSetPos(1,owner(),vec2(100,100))
+    popupSetSize(1,owner(),vec2(400,100))
+    popupSetDraggable(1,owner(),0)
+    popupMakePopup(1,owner())
+    
+    popupCenter(1,owner())
+    
+    ########## TextEntry Part ##########
+    
+    pTextEntryCreate(1,owner(), 1)
+    pTextEntrySetPos(1,owner(), vec2(30,40))
+    pTextEntrySetSize(1,owner(), vec2(340,40))
+    pTextEntrySetText(1,owner(), "Placeholder")
+}
+
+if(changed( pTextEntryGetText(1,owner()) )) {
+    print( pTextEntryGetText(1,owner()) )
+}
