@@ -1,0 +1,55 @@
+@name PopupCoreV2 Tree Test
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+interval(1)
+
+if(first()) {
+    ########## Frame Part ##########
+    
+    popupCreate(1,owner())
+    popupSetTitle(1,owner(),"PopupCore V2 Test")
+    popupSetPos(1,owner(),vec2(100,100))
+    popupSetSize(1,owner(),vec2(310, 340))
+    popupSetDraggable(1,owner(),0)
+    popupMakePopup(1,owner())
+    
+    popupCenter(1,owner())
+    
+    ########## CheckBox Part ##########
+    
+    pTreeCreate(1,owner(), 1)
+    pTreeSetPos(1,owner(), vec2(5, 30))
+    pTreeSetSize(1,owner(), vec2(300, 300))
+    pTreeSetPadding(1,owner(), 5)
+    
+    local TestTable = table()
+        TestTable["Test",table] = table()
+        TestTable["Test",table]["icon",string] = "gui/silkicons/star"
+        TestTable["Test",table]["name",string] = "Test"
+        TestTable["Test",table]["id",number] = 1
+        
+        TestTable["Test3",table] = table()
+        TestTable["Test3",table]["icon",string] = "gui/silkicons/heart"
+        TestTable["Test3",table]["name",string] = "Test3"
+        
+        TestTable["Test2",table] = table()
+        TestTable["Test2",table]["name",string] = "Test2"
+        
+        TestTable["Test",table]["Test4",table] = table()
+        TestTable["Test",table]["Test4",table]["icon",string] = "gui/silkicons/wrench"
+        TestTable["Test",table]["Test4",table]["name",string] = "Test4"
+        
+        TestTable["Test",table]["Test5",table] = table()
+        TestTable["Test",table]["Test5",table]["name",string] = "Test5"
+        TestTable["Test",table]["Test5",table]["id",number] = 2
+    pTreeSetTable(1,owner(), TestTable)
+    
+    pTreeAddFunc(1,owner())
+}
+
+if(pTreeIsPressed(1,owner())) {
+    print(pTreeGetNodeID(1,owner()) + " " +  pTreeGetNodeName(1,owner()))
+}
