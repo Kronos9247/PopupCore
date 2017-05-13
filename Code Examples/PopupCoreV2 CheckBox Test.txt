@@ -1,0 +1,31 @@
+@name PopupCoreV2 CheckBox Test
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+interval(1)
+
+if(first()) {
+    ########## Frame Part ##########
+    
+    popupCreate(1,owner())
+    popupSetTitle(1,owner(),"PopupCore V2 Test")
+    popupSetPos(1,owner(),vec2(100,100))
+    popupSetSize(1,owner(),vec2(400,100))
+    popupSetDraggable(1,owner(),0)
+    popupMakePopup(1,owner())
+    
+    popupCenter(1,owner())
+    
+    ########## CheckBox Part ##########
+    
+    pCheckboxCreate(1,owner(), 1)
+    pCheckboxSetPos(1,owner(), vec2(20,50))
+    pCheckboxSetText(1,owner(), "Check Me!")
+    pCheckboxSetValue(1,owner(), 1)
+}
+
+if(changed( pCheckboxGetValue(1,owner()) )) {
+    print( pCheckboxGetValue(1,owner()) )
+}
