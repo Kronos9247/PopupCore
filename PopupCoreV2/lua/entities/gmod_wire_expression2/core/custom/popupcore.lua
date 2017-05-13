@@ -174,3 +174,94 @@ e2function void pLabelSetText( number id, entity ply, string text )
 	PopupCore.DLabel.pLabelSetText( self.player, id, ply, text )
 end
 --------------------------[[ DLabel End ]]--------------------------
+
+
+--------------------------[[ DCheckBox ]]--------------------------
+e2function void pCheckboxCreate( number id, entity ply, number parentDFrame )
+	PopupCore.DCheckBox.pCheckboxCreate( self.player, id, ply, parentDFrame )
+end
+
+e2function void pCheckboxSetPos( number id, entity ply, vector2 pos )
+	PopupCore.DCheckBox.pCheckboxSetPos( self.player, id, ply, pos )
+end
+
+e2function void pCheckboxSetSize( number id, entity ply, vector2 size )
+	PopupCore.DCheckBox.pCheckboxSetSize( self.player, id, ply, size )
+end
+
+e2function void pCheckboxSetValue( number id, entity ply, normal bool )
+	PopupCore.DCheckBox.pCheckboxSetValue( self.player, id, ply, PopupCoreLib.E2BoolToBool( bool ) )
+end
+
+e2function void pCheckboxSetText( number id, entity ply, string text )
+	PopupCore.DCheckBox.pCheckboxSetText( self.player, id, ply, text )
+end
+
+e2function normal pCheckboxGetValue( number id, entity ply )
+	local bool = PopupCore.DCheckBox.pCheckboxGetValue( self.player, id, ply )
+	return PopupCoreLib.BoolToE2Bool( bool )
+end
+--------------------------[[ DCheckBox End ]]--------------------------
+
+
+--------------------------[[ DTextEntry ]]--------------------------
+e2function void pTextEntryCreate( number id, entity ply, number parentDFrame )
+	PopupCore.DTextEntry.pTextEntryCreate( self.player, id, ply, parentDFrame )
+end
+
+e2function void pTextEntrySetPos( number id, entity ply, vector2 pos )
+	PopupCore.DTextEntry.pTextEntrySetPos( self.player, id, ply, pos )
+end
+
+e2function void pTextEntrySetSize( number id, entity ply, vector2 size )
+	PopupCore.DTextEntry.pTextEntrySetSize( self.player, id, ply, size )
+end
+
+e2function void pTextEntrySetText( number id, entity ply, string text )
+	PopupCore.DTextEntry.pTextEntrySetText( self.player, id, ply, text )
+end
+
+e2function string pTextEntryGetText( number id, entity ply )
+	return PopupCore.DTextEntry.pTextEntryGetText( self.player, id, ply )
+end
+--------------------------[[ DTextEntry End ]]--------------------------
+
+
+--------------------------[[ DTree ]]--------------------------
+e2function void pTreeCreate( number id, entity ply, number parentDFrame )
+	PopupCore.DTree.pTreeCreate( self.player, id, ply, parentDFrame )
+end
+
+e2function void pTreeSetPos( number id, entity ply, vector2 pos )
+	PopupCore.DTree.pTreeSetPos( self.player, id, ply, pos )
+end
+
+e2function void pTreeSetSize( number id, entity ply, vector2 size )
+	PopupCore.DTree.pTreeSetSize( self.player, id, ply, size )
+end
+
+e2function void pTreeSetPadding( number id, entity ply, number padding )
+	PopupCore.DTree.pTreeSetPadding( self.player, id, ply, padding )
+end
+
+e2function void pTreeSetTable( number id, entity ply, table tab )
+	PopupCore.DTree.pTreeSetTable( self.player, id, ply, PopupCoreLib.E2TableToTable( tab ) )
+end
+
+e2function void pTreeAddFunc( number id, entity ply )
+	PopupCore.DTree.pTreeAddFunc( self.player, id, ply )
+end
+
+e2function normal pTreeIsPressed( number id, entity ply )
+	local bool = PopupCore.DTree.pTreeIsPressed( self.player, id, ply )
+	return PopupCoreLib.BoolToE2Bool( bool )
+end
+
+e2function string pTreeGetNodeName( number id, entity ply )
+	return PopupCore.DTree.pTreeGetNodeName( self.player, id, ply )
+end
+
+e2function number pTreeGetNodeID( number id, entity ply )
+	return PopupCore.DTree.pTreeGetNodeID( self.player, id, ply )
+end
+--------------------------[[ DTree End ]]--------------------------

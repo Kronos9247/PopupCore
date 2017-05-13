@@ -1,0 +1,5 @@
+E2Helper.Descriptions["pTextEntryCreate"] = "Creates a TextEntry component!"
+E2Helper.Descriptions["pTextEntrySetPos"] = "Sets the pos of the TextEntry!"
+E2Helper.Descriptions["pTextEntrySetSize"] = "Sets the size of the TextEntry!"
+E2Helper.Descriptions["pTextEntrySetText"] = "Sets the text of the TextEntry."
+E2Helper.Descriptions["pTextEntryGetText"] = "Gets the text of the TextEntry."

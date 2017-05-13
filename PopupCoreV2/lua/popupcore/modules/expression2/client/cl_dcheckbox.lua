@@ -1,0 +1,6 @@
+E2Helper.Descriptions["pCheckboxCreate"] = "Creates a CheckBox component!"
+E2Helper.Descriptions["pCheckboxSetPos"] = "Sets the pos of the checkbox!"
+E2Helper.Descriptions["pCheckboxSetSize"] = "Sets the size of the checkbox! Its not realy needed."
+E2Helper.Descriptions["pCheckboxSetValue"] = "Sets if the checkbox is checked or not!"
+E2Helper.Descriptions["pCheckboxSetText"] = "Sets the text of the checkbox."
+E2Helper.Descriptions["pCheckboxGetValue"] = "Gets the value of the checkbox. "

@@ -69,4 +69,44 @@ if SERVER then
 		if not PopupCoreData[Type][Player:SteamID()][Owner:SteamID()][DataName] then return end
 		return PopupCoreData[Type][Player:SteamID()][Owner:SteamID()][DataName]
 	end
+	
+	function PopupCoreLib.E2TableToTable( e2table )
+		local tab = {}
+		
+		for k, v in pairs( e2table.s ) do
+			local type = e2table.stypes[k]
+			
+			if type == "t" then
+				tab[k] = PopupCoreLib.E2TableToTable( v )
+			elseif type == "n" then
+				if isnumber(v) then
+					tab[k] = v
+				else
+					tab[k] = tonumber( v, 10 )
+				end
+				
+			else
+				tab[k] = v
+			end
+		end
+		
+		for k, v in pairs( e2table.n ) do
+			local type = e2table.ntypes[k]
+			
+			if type == "t" then
+				tab[k] = PopupCoreLib.E2TableToTable( v )
+			elseif type == "n" then
+				if isnumber(v) then
+					tab[k] = v
+				else
+					tab[k] = tonumber( v, 10 )
+				end
+				
+			else
+				tab[k] = v
+			end
+		end
+		
+		return tab
+	end
 end
