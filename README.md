@@ -9,12 +9,14 @@ Popup Core is a simple extension of expression2. With popup core you can create 
   <li>ComboBox</li>
   <li>Html Box</li>
   <li>Label</li>
+  <li>Tree</li>
+  <li>Text Entry</li>
+  <li>Checkbox</li>
 </ul>  
 
 <h2>ToDo:</h2>
 <ul>
   <li>Slider</li>
-  <li>Textbox</li>
   <li>Menu</li>
 </ul>  
 
