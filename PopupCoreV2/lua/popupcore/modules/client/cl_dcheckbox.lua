@@ -39,8 +39,12 @@ if CLIENT then
 			net.WriteFloat( ID )
 			
 			--if obj:GetChecked() then
-				net.WriteBool( obj:GetChecked() )
+				--net.WriteBool( obj:GetChecked() )
 			--else net.WriteBool( false ) end
+			
+			PopupCoreLib.CheckObject( obj, function( obj )
+				net.WriteBool( obj:GetChecked() )
+			end, function() net.WriteBool( false ) end )
 		end )
 	end )
 end

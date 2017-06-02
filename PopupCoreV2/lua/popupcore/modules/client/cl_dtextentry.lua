@@ -32,7 +32,9 @@ if CLIENT then
 			net.WriteEntity( Player )
 			net.WriteFloat( ID )
 			
-			net.WriteString( obj:GetValue() )
+			PopupCoreLib.CheckObject( obj, function( obj )
+				net.WriteString( obj:GetValue() )
+			end, function() net.WriteString( "" ) end )
 		end )
 	end )
 end

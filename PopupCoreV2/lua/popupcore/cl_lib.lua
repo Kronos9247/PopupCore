@@ -38,4 +38,12 @@ if CLIENT then
 			func()
 		net.SendToServer()
 	end
+	
+	function PopupCoreLib.CheckObject( obj, valid, invalid )
+		if obj and IsValid( obj ) then
+			if valid then valid( obj ) else return true end
+		else
+			if invalid then invalid( obj ) else return false end
+		end
+	end
 end
